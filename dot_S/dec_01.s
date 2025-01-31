@@ -157,5 +157,5 @@ loop:
 
   .org $fffc  ;since 6502 starts reading from fffc and fffd
   .word $8000 ; reset is set to start from $8000 look at line 11 to understand 
-  .word $0000 ; serves as padding because the last two bytes are unfilles and should be filled to compleate all 32768 bytes
+  .word $0000 ; serves as padding because the last two bytes are unfilled and should be filled to compleate all 32768 bytes
   ; only then you can successfully upload on to the eeprom if not it is not possible.

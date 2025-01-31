@@ -19,30 +19,31 @@ LCD_Clear = %00000000 ; use when you need to clear all the info in the pins
   lda #%00100000 ; inst to clear 
 ; clears all the info and resets the display
   jsr LCD_inst
-
-  lda #%00000000
-  jsr LCD_inst
-
-  lda #%00010000
-  jsr LCD_inst
-
+;-------------------
   lda #%00100000
   jsr LCD_inst
 
   lda #%00000000
   jsr LCD_inst
-
+;--------------------
   lda #%00000000
   jsr LCD_inst
-
-  lda #%11100000
+  
+  lda #%00010000
   jsr LCD_inst
-
+;-------------------
+ lda #%00000000
+  jsr LCD_inst
+  
+  lda #%011100000
+  jsr LCD_inst
+;-------------------
   lda #%00000000
   jsr LCD_inst
 
   lda #%01100000
   jsr LCD_inst
+
 
   lda #"G"
   jsr send
